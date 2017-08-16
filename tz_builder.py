@@ -159,6 +159,7 @@ def build_zone_to_gkn(data, tz_guid, template_dir, out_dir):
 
     etree.ElementTree(root).write(doc_file, pretty_print=True, xml_declaration=True, encoding='utf-8')
 
+    return doc_guid
 
 # def request_location_data()
 
@@ -203,7 +204,7 @@ def tz_build(input, output, template, fias_service, cd=CadastralDistrict):
                                 data_dict['DeltaGeopoint'] = cDeltaGeopoint
                                 data_dict['GeopointOpred'] = cGeopointOpred
 
-                            print('data_dict: ', data_dict)
+                            # print('data_dict: ', data_dict)
 
                             """
                                 Получение данных из локальной базы базы ФИАС
@@ -221,22 +222,23 @@ def tz_build(input, output, template, fias_service, cd=CadastralDistrict):
                             #TerritoryToGKN
                             tz_guid = build_territory_to_gkn(data=data, template_dir=template, out_dir=output)
                             #ZoneToGKN
-                            build_zone_to_gkn(data=data, tz_guid=tz_guid, template_dir=template, out_dir=output)
+                            z_guid = build_zone_to_gkn(data=data, tz_guid=tz_guid, template_dir=template, out_dir=output)
 
                             # Заполнение DOCX файла
                             zone_title = 'Охранная зона {0}, адрес (местоположение): {1}'.format(data['name_zone'],
                                                                                                  data['address'])
                             fill_docx(file=data['sys_number'],
-                                      path_to_tempalate=os.path.join(template, 'Заявление в ГКНШаблон.docx'),
+                                      path_to_tempalate=os.path.join(template, 'Заявление в ГКН.docx'),
                                       path_to_save=os.path.join(output, data['sys_number']),
                                       number=data['sys_number'],
                                       name=zone_title,
-                                      name_file='ZoneToGKN_{0}'.format(tz_guid),
+                                      name_file='ZoneToGKN_{0}'.format(z_guid),
                                       size='<size>')
+                            print(zone_title)
 
 
 if __name__ == '__main__':
-    tz_build(input='samples\\', output='samples\\!result\\', template=cTempalate_doc, fias_service='http://192.168.2.76:8000/api/addr_obj/{0}/')
+    tz_build(input='samples\\', output='samples\\!result\\', template=cTempalate_doc, fias_service='http://192.168.2.76:8000/api/addr_obj/{0}/', cd=CadastralDistrict('CadastralDistrict\\'))
 
 
 

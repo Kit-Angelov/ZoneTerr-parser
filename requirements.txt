@@ -1,0 +1,6 @@
+python-docx==0.8.6
+docx==0.2.4
+lxml==3.8.0
+olefile==0.44
+Pillow==4.2.1
+
