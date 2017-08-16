@@ -65,7 +65,7 @@ def build_territory_to_gkn(data, template_dir, out_dir):
     """
     parser = etree.XMLParser(ns_clean=True, remove_blank_text=True)
     doc_guid = str(uuid.uuid4())
-    csr_guid = str(uuid.uuid4())
+    csr_guid = 'Id'+str(uuid.uuid4())
 
 
     #DataManager
