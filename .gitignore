@@ -1,0 +1,7 @@
+.idea*
+!result*
+samples*
+venv*
+_pycache_*
+!result/*
+__pycache__/

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TerritoryToGKN NameSoftware="ТехноКад-Экспресс" VersionSoftware="2.19.20726.1" GUID="--guid" xmlns="urn://x-artefacts-rosreestr-ru/incoming/territory-to-gkn/1.0.4" xmlns:ki3="urn://x-artefacts-rosreestr-ru/commons/complex-types/cadastral-engineer/4.1.1" xmlns:fio="urn://x-artefacts-smev-gov-ru/supplementary/commons/1.0.1" xmlns:spat2="urn://x-artefacts-rosreestr-ru/commons/complex-types/entity-spatial/2.0.1" xmlns:doci2="urn://x-artefacts-rosreestr-ru/commons/complex-types/document-info/5.0.1">
+  <Title>
+    <Clients>
+      <Client Date="2017-07-10">
+        <Organization>
+          <Name>Публичное акционерное общество «Межрегиональная распределительная сетевая компания Центра»</Name>
+          <Agent>
+            <Appointment>инженер-землеустроитель</Appointment>
+            <fio:FamilyName>Маликов</fio:FamilyName>
+            <fio:FirstName>Дмитрий</fio:FirstName>
+            <fio:Patronymic>Александрович</fio:Patronymic>
+            <AttorneyDocument>
+              <doci2:CodeDocument>558301010000</doci2:CodeDocument>
+              <doci2:Name>Доверенность</doci2:Name>
+              <doci2:Series />
+              <doci2:Number>68 АА 0947776</doci2:Number>
+              <doci2:Date>2017-06-19</doci2:Date>
+              <doci2:IssueOrgan>ПАО "МРСК Центра"</doci2:IssueOrgan>
+              <doci2:AppliedFile Kind="01" Name="{0}\Доверенность Маликов.pdf" />
+            </AttorneyDocument>
+          </Agent>
+        </Organization>
+      </Client>
+    </Clients>
+    <Contractor>
+      <CadastralEngineer>
+        <fio:FamilyName>Палагин</fio:FamilyName>
+        <fio:FirstName>Антон</fio:FirstName>
+        <fio:Patronymic>Владимирович</fio:Patronymic>
+        <ki3:NCertificate>36-11-300</ki3:NCertificate>
+        <ki3:Telephone>-</ki3:Telephone>
+        <ki3:Address>г. Воронеж, ул. Фридриха энгельса, д.5</ki3:Address>
+        <INN>366313603332</INN>
+        <Organization>
+          <ki3:Name>ООО НПП "Компьютерные Технологии"</ki3:Name>
+          <ki3:AddressOrganization>г. Воронеж, ул. Фридриха энгельса, д. 5</ki3:AddressOrganization>
+          <CodeOGRN>1022601552083</CodeOGRN>
+        </Organization>
+      </CadastralEngineer>
+    </Contractor>
+  </Title>
+  <EntitySpatial EntSys="{0}">
+
+  </EntitySpatial>
+  <Area>
+    <AreaMeter>
+      <Area>{0}</Area>
+      <Unit>055</Unit>
+      <Inaccuracy>{0}</Inaccuracy>
+    </AreaMeter>
+  </Area>
+  <CoordSystems>
+    <spat2:CoordSystem Name="МСК-68" CsId="{0}" />
+  </CoordSystems>
+  <Diagram>
+    <AppliedFile Kind="01" Name="{0}\{1}_графика.pdf" />
+  </Diagram>
+</TerritoryToGKN>
