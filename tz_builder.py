@@ -185,12 +185,12 @@ def tz_build(input, output, template, fias_service, cd=CadastralDistrict):
                             text_semi_norm_arr = list(map(lambda x: x.replace('\n', ''), read_lines))
                             text_norm_arr = list(map(lambda x: x.replace('\t', ' '), text_semi_norm_arr))
 
-                            info = text_norm_arr[0].split(' ')
+                            #info = text_norm_arr[0].split(' ')
                             data_dict['sys_file'] = os.path.realpath(txt.name)
                             data_dict['sys_number'] = os.path.splitext(file)[0][len(cTZmask):]
                             data_dict['address'] = text_norm_arr[1]
                             data_dict['district'] = text_norm_arr[1].split(' ')[2]
-                            data_dict['number'] = info[3]
+                            #data_dict['number'] = info[3]
                             data_dict['name_zone'] = text_norm_arr[0]
                             data_dict['file_name'] = str(dir)
                             data_dict['area'] = text_norm_arr[2]
